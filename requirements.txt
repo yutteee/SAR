@@ -1,0 +1,7 @@
+IPython
+matplotlib
+networkx>=2.3
+numpy
+pandas
+scikit-learn
+jedi==0.17.2
