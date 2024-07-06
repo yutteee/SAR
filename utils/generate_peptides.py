@@ -3,6 +3,8 @@ n残基のアミノ酸配列を作成する関数
 """
 
 def generate_peptides(n):
+    print("Generating peptides...")
+
     amino_acids = ['A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V']
     peptides = []
 
@@ -14,6 +16,9 @@ def generate_peptides(n):
             build_peptide(current_peptide + amino_acid)
 
     build_peptide('')
+
+    print(f"Generated {len(peptides)} peptides.")
+    
     return peptides
 
 if __name__ == "__main__":
