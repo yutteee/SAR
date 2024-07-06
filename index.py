@@ -7,7 +7,7 @@ from rdkit import Chem
 from rdkit.Chem import Draw
 from utils.generate_peptides import generate_peptides
 from maccs_keys.index import maccs_keys
-from kcfs.index import kcfs
+from kcf.index import kcfs
 from donor_acceptor.index import donor_accepter
 
 def main(target, peptide_length, method):
