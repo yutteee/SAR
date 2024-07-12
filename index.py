@@ -26,8 +26,27 @@ def main(name, target, peptide_length):
     print("All processes are finished. Check the output folder for the results.")
 
 if __name__ == "__main__":
-    name = "Oximes"
-    target = "CCN(C(=O)C1=C(C)ON=C1C1=C(Cl)C=CC=C1)C1=CC(Cl)=CC=C1"
     peptide_length = 3
+
+    target_pair = [
+        {
+            "name": "2-Aryl-3-aminomethylquinolines",
+            "target": "COC1=CC2=C(C=C1)C=C(CNCCC1=CC=C(Br)C=C1)C(=N2)C1=CSC=C1",
+        },
+        {
+            "name": "Sulfonamide",
+            "target": "COC1=CC=C(C=C1OC)S(=O)(=O)N1CCCN(CCC1)S(=O)(=O)C1=CC(OC)=C(OC)C=C1"
+        },
+        {
+            "name": "Azepine",
+            "target": "FC1=CC=CC(F)=C1C1=C(CN2[C@H](ON=C2C2=CC=CO2)C2=CC(=CC(=C2Cl)C(F)(F)F)C(F)(F)F)C=NC=C1"
+        },
+        {
+            "name": "4-Phenylpyridine",
+            "target": "ClC1=CC(OC2=C(C=CC=C2)[N]2=CN=CC2C2=C(Cl)C=CC=C2)=C(Cl)C=C1"
+        },
+    ]
     
-    main(name, target, peptide_length)
+    for target in target_pair:
+        main(target["name"], target["target"], peptide_length)
+        pass
